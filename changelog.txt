@@ -1,0 +1,265 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ACROFORM_FIELD_STYLING_ARCHITECTURE.md
+	new file:   ACROFORM_FIELD_STYLING_EXAMPLES.md
+	new file:   ACROFORM_FIELD_STYLING_GUIDE.md
+	new file:   ACROFORM_FIELD_STYLING_QUICKREF.md
+	new file:   ACROFORM_FIELD_STYLING_README.md
+	new file:   ACROFORM_FIELD_STYLING_TESTING.md
+	new file:   ACROFORM_FIELD_STYLING_TESTING_QUICK.md
+	new file:   CONFIGURATION_GUIDE.md
+	new file:   ERROR_MESSAGES_GUIDE.md
+	new file:   HOW_TO_TEST_STYLING.md
+	deleted:    b-config-repo/common-templates/templates/base-enrollment-CT.yaml
+	deleted:    b-config-repo/common-templates/templates/signature-page.ftl
+	deleted:    b-config-repo/integration-templates/templates/integration-test.yaml
+	deleted:    b-config-repo/starting.md
+	deleted:    b-config-repo/tenant-a copy/templates/base-enrollment.yaml
+	deleted:    b-config-repo/tenant-a copy/templates/composite-enrollment.yaml
+	deleted:    b-config-repo/tenant-a copy/templates/forms/applicant-form.pdf
+	deleted:    b-config-repo/tenant-a/templates/base-enrollment-CT.yaml
+	deleted:    b-config-repo/tenant-a/templates/base-enrollment.yaml
+	deleted:    b-config-repo/tenant-a/templates/composite-enrollment.yaml
+	deleted:    b-config-repo/tenant-a/templates/forms/applicant-form.pdf
+	deleted:    b-config-repo/tenant-a/templates/signature-page.ftl
+	modified:   docs/curl-comands.md
+	deleted:    second/ARCHITECTURE_DIAGRAMS.md
+	deleted:    second/COMPOSITE_PATTERN_GUIDE.md
+	deleted:    second/DOCUMENT_GENERATION_DESIGN.md
+	deleted:    second/DOCUMENT_GENERATION_DESIGN_ARCHIVE.md
+	deleted:    second/IMPLEMENTATION-SUMMARY.md
+	deleted:    second/MAPPING_IMPLEMENTATION_SUMMARY.md
+	deleted:    second/MAPPING_STRATEGIES_README.md
+	deleted:    second/MAPPING_STRATEGY_GUIDE.md
+	deleted:    second/NAMESPACE_ARCHITECTURE.md
+	deleted:    second/NAMESPACE_GUIDE.md
+	deleted:    second/NAMESPACE_IMPLEMENTATION_SUMMARY.md
+	deleted:    second/NAMESPACE_QUICKSTART.md
+	deleted:    second/NAMESPACE_SYSTEM.md
+	deleted:    second/OVERFLOW_STRATEGIES.md
+	deleted:    second/README-QUICKSTART.md
+	deleted:    second/README.md
+	deleted:    second/TESTING_SUMMARY.md
+	deleted:    second/b-config-repo/common-templates/templates/base-enrollment-CT.yaml
+	deleted:    second/b-config-repo/common-templates/templates/base-enrollment.yaml
+	deleted:    second/b-config-repo/common-templates/templates/composite-enrollment.yaml
+	deleted:    second/b-config-repo/common-templates/templates/forms/applicant-form.pdf
+	deleted:    second/b-config-repo/common-templates/templates/signature-page.ftl
+	deleted:    second/b-config-repo/integration-templates/templates/integration-test.yaml
+	deleted:    second/b-config-repo/tenant-a/templates/base-enrollment-CT.yaml
+	deleted:    second/b-config-repo/tenant-a/templates/base-enrollment.yaml
+	deleted:    second/b-config-repo/tenant-a/templates/composite-enrollment.yaml
+	deleted:    second/b-config-repo/tenant-a/templates/forms/applicant-form.pdf
+	deleted:    second/b-config-repo/tenant-a/templates/signature-page.ftl
+	deleted:    second/config-server/pom.xml
+	deleted:    second/config-server/src/main/java/com/example/configserver/ConfigServerApplication.java
+	deleted:    second/config-server/src/main/resources/application.properties
+	deleted:    second/config-server/target/classes/application.properties
+	deleted:    second/config-server/target/classes/com/example/configserver/ConfigServerApplication.class
+	deleted:    second/config-server/target/consumer-10949502925386316471.pom
+	deleted:    second/config-server/target/consumer-13639391992038630021.pom
+	deleted:    second/config-server/target/consumer-13969409532065272607.pom
+	deleted:    second/config-server/target/consumer-18282472337340463280.pom
+	deleted:    second/config-server/target/consumer-4345758387153682671.pom
+	deleted:    second/config-server/target/consumer-5667212748620868688.pom
+	deleted:    second/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+	deleted:    second/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+	deleted:    second/create-sample-form.py
+	deleted:    second/dev.sh
+	deleted:    second/docs/01-architecture-overview.md
+	deleted:    second/docs/02-section-renderers.md
+	deleted:    second/docs/03-field-mapping-strategies.md
+	deleted:    second/docs/04-headers-footers.md
+	deleted:    second/docs/06-template-design-patterns.md
+	deleted:    second/docs/PdfboxComponent-With or Without ViewModel.md
+	deleted:    second/docs/README.md
+	deleted:    second/docs/composite or not.md
+	deleted:    second/docs/curl-comands.md
+	deleted:    second/docs/render multiple pages.md
+	deleted:    second/enrollment-request-output.pd
+	deleted:    second/mvn_output.txt
+	deleted:    second/pom.xml
+	deleted:    second/queries.txt
+	deleted:    second/src/main/java/com/example/demo/DemoApplication.java
+	deleted:    second/src/main/java/com/example/demo/HelloController.java
+	deleted:    second/src/main/java/com/example/demo/docgen/aspect/ExecutionTimeAspect.java
+	deleted:    second/src/main/java/com/example/demo/docgen/aspect/LogExecutionTime.java
+	deleted:    second/src/main/java/com/example/demo/docgen/config/CacheConfig.java
+	deleted:    second/src/main/java/com/example/demo/docgen/config/FreeMarkerConfig.java
+	deleted:    second/src/main/java/com/example/demo/docgen/controller/DocumentController.java
+	deleted:    second/src/main/java/com/example/demo/docgen/core/PageContext.java
+	deleted:    second/src/main/java/com/example/demo/docgen/core/RenderContext.java
+	deleted:    second/src/main/java/com/example/demo/docgen/exception/ResourceLoadingException.java
+	deleted:    second/src/main/java/com/example/demo/docgen/exception/TemplateLoadingException.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/CustomMappingStrategy.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/DirectMappingStrategy.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/FieldMappingStrategy.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/JsonPathMappingStrategy.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/JsonataMappingStrategy.java
+	deleted:    second/src/main/java/com/example/demo/docgen/mapper/MappingType.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/DocumentGenerationRequest.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/DocumentTemplate.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/FieldMappingGroup.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/FooterTemplate.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/HeaderFooterConfig.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/HeaderTemplate.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/OverflowConfig.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/PageSection.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/RenderType.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/RepeatingGroupConfig.java
+	deleted:    second/src/main/java/com/example/demo/docgen/model/SectionType.java
+	deleted:    second/src/main/java/com/example/demo/docgen/processor/FreeMarkerHeaderFooterRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/processor/HeaderFooterProcessor.java
+	deleted:    second/src/main/java/com/example/demo/docgen/processor/HeaderFooterRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/processor/PdfBoxHeaderFooterRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/AcroFormRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/FreeMarkerRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/PdfBoxDirectSectionRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/SectionRenderer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/pdfbox/ComponentRegistry.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/pdfbox/InvoiceSummaryComponent.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/pdfbox/PdfComponent.java
+	deleted:    second/src/main/java/com/example/demo/docgen/renderer/pdfbox/SimpleTextComponent.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/CustomFreeMarkerTemplateLoader.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/DocumentComposer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/NamespaceResolver.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/ResourceStorageClient.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/TemplateCacheWarmer.java
+	deleted:    second/src/main/java/com/example/demo/docgen/service/TemplateLoader.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/InvoiceViewModel.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/InvoiceViewModelBuilder.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/MemberPlanViewModel.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/MemberPlanViewModelBuilder.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/ViewModelBuilder.java
+	deleted:    second/src/main/java/com/example/demo/docgen/viewmodel/ViewModelFactory.java
+	deleted:    second/src/main/java/com/example/demo/resources/ResourceStorageController.java
+	deleted:    second/src/main/resources/application-dev.properties
+	deleted:    second/src/main/resources/application.properties
+	deleted:    second/src/main/resources/common-templates/templates/base-enrollment-CT.yaml
+	deleted:    second/src/main/resources/common-templates/templates/base-enrollment.yaml
+	deleted:    second/src/main/resources/common-templates/templates/composite-enrollment.yaml
+	deleted:    second/src/main/resources/common-templates/templates/forms/applicant-form.pdf
+	deleted:    second/src/main/resources/common-templates/templates/forms/test-local.pdf
+	deleted:    second/src/main/resources/common-templates/templates/signature-page.ftl
+	deleted:    second/src/main/resources/config-repo/common-templates/templates/forms/test-external.pdf
+	deleted:    second/src/main/resources/config-repo/common-templates/templates/forms/test-local.pdf
+	deleted:    second/src/main/resources/example-request-namespace.json
+	deleted:    second/src/main/resources/example-request.json
+	deleted:    second/src/main/resources/examples/advanced-jsonata-request.json
+	deleted:    second/src/main/resources/examples/combined-request.json
+	deleted:    second/src/main/resources/examples/direct-mapping-request.json
+	deleted:    second/src/main/resources/examples/enrollment-application.yaml
+	deleted:    second/src/main/resources/examples/freemarker-request.json
+	deleted:    second/src/main/resources/examples/jsonata-mapping-request.json
+	deleted:    second/src/main/resources/examples/pdfbox-component-request.json
+	deleted:    second/src/main/resources/examples/pdfbox-viewmodel-request.json
+	deleted:    second/src/main/resources/tenant-a/templates/base-enrollment-CT.yaml
+	deleted:    second/src/main/resources/tenant-a/templates/base-enrollment.yaml
+	deleted:    second/src/main/resources/tenant-a/templates/composite-enrollment.yaml
+	deleted:    second/src/main/resources/tenant-a/templates/forms/applicant-form.pdf
+	deleted:    second/src/main/resources/tenant-a/templates/signature-page.ftl
+	deleted:    second/src/main/resources/test-data/composite-dental-ny.json
+	deleted:    second/src/main/resources/test-data/composite-medical-ca.json
+	deleted:    second/src/main/resources/test-data/comprehensive-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-basepath-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-jsonpath-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-multi-overflow-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-overflow-test.json
+	deleted:    second/src/main/resources/test-data/enrollment-repeating-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-request.json
+	deleted:    second/src/main/resources/test-data/enrollment-single-child.json
+	deleted:    second/src/main/resources/test-data/header-footer-request.json
+	deleted:    second/src/main/resources/test-data/invoice-optimized-request.json
+	deleted:    second/src/main/resources/test-data/invoice-viewmodel-request.json
+	deleted:    second/src/main/resources/test-data/namespace-placeholder-state.json
+	deleted:    second/src/main/resources/test-data/override-test-request.json
+	deleted:    second/src/main/resources/test-data/plans-summary-request.json
+	deleted:    second/src/main/resources/test-data/transformation-test.json
+	deleted:    second/src/main/resources/test-data/vertical-headers-request.json
+	deleted:    second/src/main/resources/test.http
+	deleted:    second/src/test/java/com/example/demo/docgen/controller/DocumentControllerIntegrationTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/integration/ResourceStorageIntegrationTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/mapper/CustomMappingStrategyTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/renderer/AcroFormRendererTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/renderer/ResourceLoadingExceptionTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/DocumentComposerTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/IntegrationConfigServerTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/NamespaceDocumentComposerTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/NamespaceResolverTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/NamespaceTemplateLoaderTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/TemplateLoaderCircularReferenceTest.java
+	deleted:    second/src/test/java/com/example/demo/docgen/service/TemplateLoaderTest.java
+	deleted:    second/src/test/resources/application-test.properties
+	deleted:    second/src/test/resources/config-repo/common-templates/templates/forms/test-external.pdf
+	deleted:    second/src/test/resources/templates/child-addendum.yaml
+	deleted:    second/src/test/resources/templates/enrollment-main-overflow.yaml
+	deleted:    second/src/test/resources/templates/test-circular-a.yaml
+	deleted:    second/src/test/resources/templates/test-circular-b.yaml
+	deleted:    second/src/test/resources/templates/test-circular-self.yaml
+	deleted:    second/src/test/resources/templates/test-fragment-circular-dep.yaml
+	deleted:    second/src/test/resources/templates/test-fragment-circular.yaml
+	deleted:    second/src/test/resources/templates/test-inheritance-base.yaml
+	deleted:    second/src/test/resources/templates/test-inheritance-child.yaml
+	deleted:    second/src/test/resources/templates/test-inheritance-grandchild.yaml
+	deleted:    second/src/test/resources/test-data/enrollment-overflow-test.json
+	deleted:    second/techno-info-main/README.md
+	deleted:    second/techno-info-main/tech-pocs.zip
+	deleted:    second/techno-info-main/test.txt
+	deleted:    second/test-composite.sh
+	deleted:    second/test-config-server.sh
+	deleted:    second/test-external.pdf
+	deleted:    second/test-local.pdf
+	deleted:    second/test-multi-overflow.sh
+	deleted:    second/test-overflow.sh
+	deleted:    second/test-plans-summary.sh
+	deleted:    second/test-strategy1.sh
+	deleted:    second/test-unified-endpoint.sh
+	deleted:    second/test-viewmodel.sh
+	modified:   src/main/java/com/example/demo/docgen/controller/DocumentController.java
+	new file:   src/main/java/com/example/demo/docgen/model/BorderStyle.java
+	modified:   src/main/java/com/example/demo/docgen/model/FieldMappingGroup.java
+	new file:   src/main/java/com/example/demo/docgen/model/FieldStyling.java
+	modified:   src/main/java/com/example/demo/docgen/renderer/AcroFormRenderer.java
+	modified:   src/main/java/com/example/demo/docgen/service/DocumentComposer.java
+	modified:   src/main/java/com/example/demo/docgen/service/TemplateLoader.java
+	deleted:    src/main/resources/application-dev.yml
+	deleted:    src/main/resources/application.yml
+	new file:   src/main/resources/bootstrap.yml
+	renamed:    second/src/main/resources/enrollment-application.yaml -> src/main/resources/common-templates/templates/enrollment-application.yaml
+	new file:   src/main/resources/common-templates/templates/styling-test.yaml
+	new file:   src/main/resources/test-styling-templates/styled-template-example.yaml
+	new file:   src/test/java/com/example/demo/docgen/integration/ResourceStorageFilesystemTest.java
+	modified:   src/test/java/com/example/demo/docgen/renderer/ResourceLoadingExceptionTest.java
+	new file:   src/test/java/com/example/demo/docgen/service/ResourceStorageClientUrlTest.java
+	new file:   src/test/java/com/example/demo/docgen/service/TemplateCacheWarmerUnitTest.java
+	new file:   src/test/java/com/example/demo/docgen/service/TestUtils.java
+	modified:   src/test/resources/application-test.yml
+	renamed:    b-config-repo/common-templates copy/templates/base-enrollment-CT.yaml -> test-me/common-templates/templates/base-enrollment-CT.yaml
+	renamed:    b-config-repo/common-templates copy/templates/base-enrollment.yaml -> test-me/common-templates/templates/base-enrollment.yaml
+	renamed:    b-config-repo/common-templates copy/templates/composite-enrollment.yaml -> test-me/common-templates/templates/composite-enrollment.yaml
+	renamed:    b-config-repo/common-templates copy/templates/forms/applicant-form.pdf -> test-me/common-templates/templates/forms/applicant-form.pdf
+	renamed:    b-config-repo/common-templates copy/templates/signature-page.ftl -> test-me/common-templates/templates/signature-page.ftl
+	new file:   test-me/doc-gen-service/application-dev.yml
+	new file:   test-me/doc-gen-service/application-prod.yml
+	new file:   test-me/doc-gen-service/application.yml
+	renamed:    b-config-repo/integration-templates copy/templates/integration-test.yaml -> test-me/integration-templates/templates/integration-test.yaml
+	renamed:    b-config-repo/tenant-a copy/templates/base-enrollment-CT.yaml -> test-me/tenant-a/templates/base-enrollment-CT.yaml
+	renamed:    b-config-repo/common-templates/templates/base-enrollment.yaml -> test-me/tenant-a/templates/base-enrollment.yaml
+	renamed:    b-config-repo/common-templates/templates/composite-enrollment.yaml -> test-me/tenant-a/templates/composite-enrollment.yaml
+	renamed:    b-config-repo/common-templates/templates/forms/applicant-form.pdf -> test-me/tenant-a/templates/forms/applicant-form.pdf
+	renamed:    b-config-repo/tenant-a copy/templates/signature-page.ftl -> test-me/tenant-a/templates/signature-page.ftl
+	new file:   test-styling-feature.sh
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   config-repo (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	changelog.txt
+
