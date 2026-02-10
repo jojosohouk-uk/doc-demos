@@ -1,0 +1,5 @@
+templateId: primary-fragment
+description: Base enrollment template with common sections
+sections:
+  - sectionId: applicant-info
+    type: ACROFORM

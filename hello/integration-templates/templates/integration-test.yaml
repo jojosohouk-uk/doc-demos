@@ -1,0 +1,7 @@
+templateId: integration-test
+sections:
+  - sectionId: s1
+    type: FREEMARKER
+    order: 1
+metadata:
+  source: config-repo

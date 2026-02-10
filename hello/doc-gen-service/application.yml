@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  cache:
+    type: caffeine
+    caffeine:
+      spec: "maximumSize=1000,expireAfterWrite=10m"
+  
+  freemarker:
+    enabled: false
+    charset: UTF-8
+    suffix: .ftl
+
+docgen:
+  template:
+    base-path: "classpath:/"
+    # Disable remote template loading for security
+    remote-enabled: false
+  resources:
+    storage-enabled: true
+    base-url: http://localhost:9090
+    path-pattern: "{namespace}/templates/{resource}"
+    # Optional explicit per-namespace endpoints (override pattern)
+    common-templates:
+      url: ""
+    tenant-a:
+      url: ""
+    tenant-b:
+      url: ""
+    
+  rendering:
+    # Cache settings for rendered PDFs
+    cache-enabled: true
+    cache-ttl-seconds: 3600
+    
+  logging:
+    # Enable detailed logging for template resolution
+    template-resolution-debug: false
+    field-mapping-debug: false
+
+# Logging configuration
+logging:
+  level:
+    com.example.demo: INFO
+    com.example.demo.docgen.service: INFO
+    com.example.demo.docgen.renderer: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

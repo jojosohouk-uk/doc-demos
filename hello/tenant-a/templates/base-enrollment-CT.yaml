@@ -1,0 +1,31 @@
+templateId: base-enrollment
+description: Base enrollment template with common sections
+includedFragments:
+  - fragments/primary-fragment
+  
+
+sections:
+  - sectionId: applicant-info
+    type: ACROFORM
+    order: 10
+    fieldMappingGroups:
+      - mappingType: JSONPATH
+        basePath: "$.application"
+        fields:
+          applicationId: "applicationId"
+          primaryFirstName: "primaryFirstName"
+          primaryLastName: "primaryLastName"
+          primaryDob: "primaryDob"
+          spouseFirstName: "spouseFirstName"
+          spouseLastName: "spouseLastName"
+          spouseDob: "spouseDob"
+      - mappingType: JSONPATH
+        basePath: "$.application.children"
+        repeatingGroup:
+          indexSeparator: "."
+          indexPosition: AFTER_FIELD
+          fields:
+            childFirstName: "firstName"
+            childLastName: "lastName"
+            childDob: "dob"
+  

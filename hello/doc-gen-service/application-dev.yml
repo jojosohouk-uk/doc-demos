@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: caffeine
+    caffeine:
+      spec: "maximumSize=500,expireAfterWrite=5m"
+
+docgen:
+  template:
+    # Use local templates for development
+    remote-enabled: false
+  rendering:
+    cache-ttl-seconds: 1800
+    
+logging:
+  level:
+    com.example.demo: DEBUG
+    com.example.demo.docgen: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"

@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  cache:
+    type: caffeine
+    caffeine:
+      spec: "maximumSize=5000,expireAfterWrite=30m"
+
+docgen:
+  template:
+    # Can be enabled in production if templates are served remotely
+    remote-enabled: false
+  rendering:
+    cache-ttl-seconds: 7200
+    
+logging:
+  level:
+    com.example.demo: INFO
+    com.example.demo.docgen: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
