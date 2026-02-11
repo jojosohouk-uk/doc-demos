@@ -11,6 +11,7 @@ import com.example.demo.docgen.model.SectionType;
 import com.example.demo.docgen.service.NamespaceResolver;
 import com.example.demo.docgen.service.ResourceStorageClient;
 import com.example.demo.docgen.service.TemplateLoader;
+import com.example.demo.docgen.viewmodel.ViewModelFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
@@ -46,6 +47,7 @@ public class AcroFormRenderer implements SectionRenderer {
     private final TemplateLoader templateLoader;
     private final NamespaceResolver namespaceResolver;
     private ResourceStorageClient resourceStorageClient;
+    private ViewModelFactory viewModelFactory;
     
     @Autowired
     public AcroFormRenderer(List<FieldMappingStrategy> mappingStrategies, TemplateLoader templateLoader, NamespaceResolver namespaceResolver) {
@@ -57,6 +59,11 @@ public class AcroFormRenderer implements SectionRenderer {
     @Autowired(required = false)
     public void setResourceStorageClient(ResourceStorageClient resourceStorageClient) {
         this.resourceStorageClient = resourceStorageClient;
+    }
+
+    @Autowired(required = false)
+    public void setViewModelFactory(ViewModelFactory viewModelFactory) {
+        this.viewModelFactory = viewModelFactory;
     }
 
     // Backwards-compatible constructor for tests and legacy callers
@@ -78,8 +85,26 @@ public class AcroFormRenderer implements SectionRenderer {
                 return document;
             }
             
+            // Apply ViewModel transformation if specified
+            RenderContext dataContext = context;
+            if (section.getViewModelType() != null && viewModelFactory != null) {
+                Object viewModel = viewModelFactory.createViewModel(section.getViewModelType(), context.getData());
+                log.info("Applied ViewModel type '{}' to AcroForm section: {}", 
+                    section.getViewModelType(), section.getSectionId());
+                
+                // Create a new context with the transformed ViewModel data
+                // Convert ViewModel to Map if needed for field mapping
+                Map<String, Object> viewModelData = viewModel instanceof Map 
+                    ? (Map<String, Object>) viewModel 
+                    : context.getData();
+                
+                RenderContext vmContext = new RenderContext(context.getTemplate(), viewModelData);
+                vmContext.setNamespace(context.getNamespace());
+                dataContext = vmContext;
+            }
+            
             // Map data to field values (supports both single and multiple groups)
-            Map<String, String> fieldValues = mapFieldValues(section, context);
+            Map<String, String> fieldValues = mapFieldValues(section, dataContext);
             log.info("Mapped field values: {}", fieldValues);
             
             // Fill form fields with values and apply styles

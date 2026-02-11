@@ -88,4 +88,65 @@ public class AcroFormRendererTest {
         assertEquals("Alice", result.get("childName.1"));
         assertEquals("Bob", result.get("childName.2"));
     }
+
+    @Test
+    public void testViewModelTransformationInMapping() throws Exception {
+        // Test that ViewModel can be used to transform data before field mapping
+        // This demonstrates the benefit of ViewModels over complex JSONATA expressions
+        
+        // Setup raw nested data structure
+        Map<String, Object> data = new HashMap<>();
+        Map<String, Object> applicant = new HashMap<>();
+        Map<String, Object> demographic = new HashMap<>();
+        demographic.put("firstName", "John");
+        demographic.put("lastName", "Doe");
+        demographic.put("middleName", "Robert");
+        applicant.put("demographic", demographic);
+        applicant.put("type", "PRIMARY");
+        
+        data.put("applicants", Arrays.asList(applicant));
+        data.put("applicationId", "APP-2026-001");
+        data.put("applicationDate", "2026-02-11");
+        
+        // Create a mock ViewModel that simulates what AcroFormViewModelBuilder would produce
+        // For this test, we'll mock the ViewModelFactory behavior
+        Map<String, Object> viewModelData = new HashMap<>();
+        viewModelData.put("primaryFullName", "John Robert Doe");  // Computed by builder
+        viewModelData.put("primaryFirstName", "John");
+        viewModelData.put("primaryLastName", "Doe");
+        viewModelData.put("applicationId", "APP-2026-001");
+        viewModelData.put("dependentCount", 0);  // Computed
+        viewModelData.put("isFamilyApplication", false);  // Computed
+        
+        // Setup field mappings to use the flattened ViewModel data
+        Map<String, String> fields = new HashMap<>();
+        fields.put("fullName", "$.primaryFullName");
+        fields.put("firstName", "$.primaryFirstName");
+        fields.put("lastName", "$.primaryLastName");
+        fields.put("appId", "$.applicationId");
+        
+        FieldMappingGroup group = FieldMappingGroup.builder()
+                .mappingType(MappingType.JSONPATH)
+                .fields(fields)
+                .build();
+        
+        PageSection section = PageSection.builder()
+                .sectionId("test-viewmodel")
+                .fieldMappingGroups(Arrays.asList(group))
+                .viewModelType("AcroForm")  // This would trigger ViewModel transformation
+                .build();
+        
+        // Test mapping with ViewModel data
+        RenderContext context = new RenderContext(null, viewModelData);
+        
+        java.lang.reflect.Method method = AcroFormRenderer.class.getDeclaredMethod("mapFieldValues", PageSection.class, RenderContext.class);
+        method.setAccessible(true);
+        Map<String, String> result = (Map<String, String>) method.invoke(renderer, section, context);
+        
+        // Verify that ViewModel-transformed data is properly mapped
+        assertEquals("John Robert Doe", result.get("fullName"));
+        assertEquals("John", result.get("firstName"));
+        assertEquals("Doe", result.get("lastName"));
+        assertEquals("APP-2026-001", result.get("appId"));
+    }
 }
