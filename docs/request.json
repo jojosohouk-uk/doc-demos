@@ -1,0 +1,9 @@
+{
+  "namespace":"common-templates",
+  "templateId":"templates/example.xlsx",
+  "data":{
+    "customerName":"Alice",
+    "items":[["Apple",2,1.5],["Banana",3,0.75]]
+  },
+  "options": { "verifyKeys": ["customerName","items"] }
+}

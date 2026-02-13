@@ -1,0 +1,16 @@
+{
+  "namespace": "common-templates",
+  "templateId": "templates/example.xlsx",
+  "data": {
+    "customerName": "Alice Smith",
+    "orderDate": "2026-02-12",
+    "items": [
+      ["Apple", 2, 1.50],
+      ["Banana", 3, 0.75],
+      ["Orange", 1, 2.00]
+    ]
+  },
+  "options": {
+    "verifyKeys": ["customerName", "orderDate", "items"]
+  }
+}

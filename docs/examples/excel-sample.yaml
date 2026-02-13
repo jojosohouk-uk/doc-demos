@@ -1,0 +1,8 @@
+sections:
+  - sectionId: excel-sample
+    type: EXCEL
+    templatePath: templates/example.xlsx
+
+    # This implementation uses named ranges inside the Excel workbook.
+    # - Use a named range "customerName" to write a single scalar value
+    # - Use a named range "items" referencing an area (e.g. Sheet1!$A$4:$C$10) to populate table rows
